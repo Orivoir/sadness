@@ -1,0 +1,70 @@
+.list-products {
+
+    margin: 5vh 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.list-products section {
+
+    margin: 3vh 0;
+}
+
+.list-products section figure:hover::before {
+
+    opacity: 0;
+}
+
+.list-products section figure::before {
+
+    content: '';
+    position: absolute;
+
+    width: 8vh;
+    height: 8vh;
+    min-width: 42px;
+    min-height: 42px;
+    background-image: url("./compass.svg");
+    background-size: cover;
+    background-color: #273c75; 
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: .3s linear all;
+}
+
+.list-products section figure {
+
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.list-products section figure img {
+    transition: .3s linear all;
+}
+
+.list-products section figure img:hover {
+    transform: scale( 1.15 );
+}
+
+
+.list-products section figure:hover figcaption {
+
+    opacity: 0;
+}
+
+.list-products section figure figcaption {
+
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s linear all;
+    position: relative;
+    width: 100%;
+    padding-bottom: 1.5vh;
+    background: rgba(39, 60, 117,.9);
+    color: rgb( 200,200,200 );
+    transform: translateY(-50%);
+}

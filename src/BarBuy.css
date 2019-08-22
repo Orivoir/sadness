@@ -1,0 +1,32 @@
+.BarBuy {
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: #fff;
+}
+
+.BarBuy .status-change {
+
+    cursor: pointer;
+    padding: 2vh;
+    background: #273c75;
+    position: relative;
+}
+
+.hidden {
+
+    display: none;
+}
+
+.BarBuy .notif-buy {
+
+    position: absolute;
+    left: 5%;
+    top: -6px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    padding: .5vh;
+    color: #90cf78 ;
+    font-weight: bold;
+}
