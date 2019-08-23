@@ -1,17 +1,105 @@
 .BarBuy {
 
+    overflow: visible!important;
+    z-index: 99;
+    min-width: 25%;
+    min-height: 60%;
+    background: #273c75;
     position: fixed;
     right: 0;
     top: 0;
     color: #fff;
+    transition: .2s linear all;
+}
+
+.empty-basket {
+
+    user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    text-align: center;
+}
+
+.BarBuy.close {
+
+    transform: translateX( 80% ) ;
+    min-width: 320px!important;  
+    height: 10%;
+    min-height: 30px;
+}
+
+.BarBuy.close .status-change {
+
+    top: 50%;
+    transform: translateY(-50%) ;
+}
+
+
+
+.BarBuy.close .content-buy {
+
+    display: none;
+}
+
+.BarBuy section ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.BarBuy section li figure {
+
+    margin: 0;
+    padding-right: 2vh;
+}
+
+.BarBuy h3 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.BarBuy section li.item-product h2 {
+
+    margin: 0;
+}
+
+.BarBuy section li.item-product:hover {
+
+    background: rgba( 255,5,200 , .1 ); 
+    opacity: .8;
+    text-decoration: line-through;
+}
+
+.BarBuy section li.item-product img {
+
+    transition: .6s linear all;
+}
+
+.BarBuy section li.item-product:hover img {
+
+    filter: blur( 3px );
+}
+
+.BarBuy section li {
+
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+}
+
+.BarBuy section li.item-product {
+    transition: .3s linear all;
+    cursor: pointer;
 }
 
 .BarBuy .status-change {
 
     cursor: pointer;
     padding: 2vh;
-    background: #273c75;
     position: relative;
+    left: 0;
 }
 
 .hidden {
@@ -22,11 +110,35 @@
 .BarBuy .notif-buy {
 
     position: absolute;
-    left: 5%;
-    top: -6px;
-    font-size: 1.2rem;
+    left: 7.5%;
+    top: -10px;
+    font-size: 1.5rem;
     border-radius: 50%;
     padding: .5vh;
     color: #90cf78 ;
     font-weight: bold;
+}
+
+.BarBuy .total-price {
+
+    margin: 1vh 0;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 725px) , ( max-height: 600px ) {
+
+    .BarBuy .list-total {
+
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) , ( max-height: 450px ) {
+
+    .BarBuy {
+
+        height: 100%;
+        width: 100%;
+    }
 }

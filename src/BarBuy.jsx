@@ -25,7 +25,18 @@ export default class BarBuy extends React.Component {
         super( props ) ;
 
         this.onRemoveProduct = this.props.removeOne ;
-    } 
+        this.onToggle = this.onToggle.bind( this ) ; 
+    }
+    
+    /**
+     * 
+     * @param {SyntheticEvent} e 
+     */
+    onToggle( e ) {
+
+        e.preventDefault() ;
+        this.setState( state => ( { open: !state.open } ) ) ;
+    }
 
     render() {
 
@@ -35,12 +46,67 @@ export default class BarBuy extends React.Component {
                <section className="status-change">
                     {/* icon */}
                     <FontAwesomeIcon
-                        icon={['fas', 'shopping-cart' ]}
+                        icon={['fas', this.state.open ? 'times' : 'shopping-cart' ]}
                         style={{color:"#fff"}}
-                        size="1x"
+                        size="2x"
+                        onClick={this.onToggle}
+                        className="icon-status"
                     />
                     {/* in the basket */}
-                    <span className="hidden notif-buy">0</span>
+                    <span onClick={this.onToggle} className={`${!this.props.basket.length || this.state.open ? "hidden" : ""} notif-buy`}>{this.props.basket.length}</span>
+
+               </section>
+
+               <section className="content-buy">
+                    <ul>
+                        {
+                            // Panier
+                            this.props.basket.length ? this.props.basket.map( product => (
+                                <li onClick={e => this.onRemoveProduct( e , product )} key={product.id} className="item-product">
+                                    <figure>
+                                        <img 
+                                            src={product.picture}
+                                            alt={product.title}
+                                            widht="45"
+                                            height="45"
+                                        />
+                                    </figure>
+                                    <h2>{ product.title.split(' ')[0] } x { product.quantity } </h2>
+                                    <blockquote>{ product.price * product.quantity } €</blockquote>
+                                </li>
+                            ) ) : <p className="empty-basket">
+                                Your cart and currently empty&nbsp;
+                                <span role="img" aria-label="simley embarrassing">😅</span> 
+                            </p>
+                        }
+                    </ul>
+
+
+                    {
+                        this.props.basket.length ? (
+                            <>
+                                <hr />
+                                <h3>TOTAL</h3>
+
+                                {this.props.basket.length < 4 ?
+                                    <ul className='list-total'>
+                                        {this.props.basket.map( product => (
+                                            <li>
+                                                {product.price} x {product.quantity}
+                                            </li>
+                                        ) )}
+                                    </ul> : null
+                                }
+
+                                <p class="total-price">
+                                    {
+                                        this.props.basket.map( product => product.price * product.quantity ).add()
+                                    } €
+                                </p>
+                            </>
+                        ) : null
+                    }
+
                </section>
 
                
