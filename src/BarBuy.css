@@ -148,4 +148,9 @@
         height: 100%;
         width: 100%;
     }
+    
+    .BarBuy.close {
+
+        transform: translateX( 86% ) ;
+    }
 }

@@ -8,8 +8,14 @@ const properties = {
     infinite: true,
     indicators: true,
     arrows: true,
-    onChange: (oldIndex, newIndex) => {
-      console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+    
+    /**
+     * @action exec after duration all slide
+     */
+    onChange: (currentIndex, nextIndex) => {
+      /**
+       * Silence is <feature />
+       */
     }
   }
 
@@ -20,8 +26,6 @@ export default class SliderSadness extends React.Component {
         const { list } = this.props ;
 
         return (
-            // <div className="slide-container">
-
               <Slide {...properties}>
 
                 {
@@ -37,8 +41,6 @@ export default class SliderSadness extends React.Component {
                 }
               
               </Slide>
-
-          // </div>
         ) ;
     }
 };

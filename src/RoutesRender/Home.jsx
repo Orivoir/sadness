@@ -17,16 +17,13 @@ export default class Home extends React.Component {
 
         return (
             <DocumentTitle title="sadness | home">
+
                 <section className="Home">
 
                     <SliderSadness
-                        list={
-                            products.slice( 0 , 4 )
-                        }
+                        list={products.slice( 0 , 4 )}
                         onClick={this.onAddProduct}
                     />
-
-                    {/* flex - align random products */}
 
                     <ShowProducts
                         list={products.slice( 2 , 6 ) }
@@ -34,6 +31,7 @@ export default class Home extends React.Component {
                     />
 
                 </section>
+
             </DocumentTitle>
         )
     }

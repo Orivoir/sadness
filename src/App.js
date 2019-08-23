@@ -137,8 +137,14 @@ export default class App extends React.Component {
       <>
 
         <header>
+          {/*
+            -------------------------
+            --  in think building  --
+            -------------------------
+          */}
         </header>
         
+        {/* bar status buy products */}
         <BarBuy 
           basket={basket}
           removeOne={this.removeOne2Basket}
@@ -146,11 +152,12 @@ export default class App extends React.Component {
 
         <Switch>
           <Route exact path="/" render={() => <Home addOne={this.addOne2Basket} />} />
-          {/* <Route exact path="/men" addOne={this.addOne2Basket} render={<Clothing type="men" />} /> */}
-          {/* <Route exact path="/women" addOne={this.addOne2Basket} render={<Clothing type="women" />}} /> */}
-          {/* <Route exact path="/child" addOne={this.addOne2Basket} render={<Clothing type="child" />}} /> */}
+          {/* <Route exact path="/men" addOne={this.addOne2Basket} render={<Clothing type={["men"]} />} /> */}
+          {/* <Route exact path="/women" addOne={this.addOne2Basket} render={<Clothing type={["women"]} />}} /> */}
+          {/* <Route exact path="/child" addOne={this.addOne2Basket} render={<Clothing type={["child"]} />}} /> */}
         </Switch>
       </>
+    
     );
 
   }

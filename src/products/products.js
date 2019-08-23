@@ -1,3 +1,6 @@
+/**
+ * @metadata factory products
+ */
 export const products = [
 
     {
@@ -69,5 +72,47 @@ export const products = [
         picture: "https://mosaic04.ztat.net/vgs/media/catalog-md/GU/12/3L/02/TQ/11/GU123L02T-Q11@7.jpg" ,
         price: 30 ,
         type: [ "child" ]
+    },
+    {
+        id: 9 ,
+        title: "T-shirt - Patagonia P-6" ,
+        picture: "http://s7d5.scene7.com/is/image/UrbanOutfitters/48722565_070_d?$medium$&qlt=80&fit=constrain" ,
+        price: 36 ,
+        type: [ "men" ]
+    },
+    {
+        id: 10 ,
+        title: "Sweat - Champion Reverse Weave Hoodie" ,
+        picture: "http://s7d5.scene7.com/is/image/UrbanOutfitters/41385576_002_d?$medium$&qlt=80&fit=constrain" ,
+        price: 60 ,
+        type: [ "men" ]
+    },
+    {
+        id: 11 ,
+        title: "Dobby Puff Sleeve Babydoll Dress" ,
+        picture: "http://s7d5.scene7.com/is/image/UrbanOutfitters/52843380_015_d?$medium$&qlt=80&fit=constrain" ,
+        price: 55 ,
+        type: [ "women" ]
+    },
+    {
+        id: 12 ,
+        title: "BDG-Carmella Reversible Hooded Teddy Jacket" ,
+        picture: "http://s7d5.scene7.com/is/image/UrbanOutfitters/52225315_012_d?$medium$&qlt=80&fit=constrain" ,
+        price: 70 ,
+        type: [ "women" ]
+    },
+    {
+        id: 13 ,
+        title: "Sweat HOODIE BICOLOR" ,
+        picture: "http://cdn.shopify.com/s/files/1/0240/3441/0601/products/Eshop_Yoko_-_Permanente_-_Hoodie_-_Rouge_-_09878.jpg?v=1560517337" ,
+        price: 60 ,
+        type: ["men" , "women" ]
+    },
+    {
+        id: 14 ,
+        title: "shirt White RAFT Molo" ,
+        picture: "https://mosaic04.ztat.net/vgs/media/catalog-sm/M8/52/4I/00/CA/11/M8524I00C-A11@8.jpg" ,
+        price: 35 ,
+        type: ["child" ]
     }
 ] ;
