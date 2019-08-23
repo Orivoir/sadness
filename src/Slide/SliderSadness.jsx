@@ -33,7 +33,7 @@ export default class SliderSadness extends React.Component {
                       <div className="each-slide" key={product.id} onClick={e => this.props.onClick(e , product) } >
 
                           <div style={{'backgroundImage': `url(${product.picture})`}}>
-                            <span class="label-slide" >{product.title} ( {product.price} € ) </span>
+                            <span className="label-slide" >{product.title} ( {product.price} € ) </span>
                           </div>
                       
                       </div>    

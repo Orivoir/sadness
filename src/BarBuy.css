@@ -116,8 +116,9 @@
 
     opacity: 1;
     position: absolute;
-    left: 7.5%;
-    top: -10px;
+    left: 35%;
+    z-index: 99;
+    top: -9px;
     font-size: 1.5rem;
     border-radius: 50%;
     padding: .5vh;

@@ -2,7 +2,10 @@
 
     margin: 5vh 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    min-width: 400px;
     flex-wrap: wrap;
 }
 
@@ -35,6 +38,8 @@
 .list-products section {
 
     margin: 3vh 0;
+    max-width: 33%;
+    min-width: 400px;
 }
 
 .list-products section figure:hover::before {
@@ -69,10 +74,12 @@
 }
 
 .list-products section figure img {
+    width: 100%;
     transition: .3s linear all;
 }
 
 .list-products section figure img:hover {
+
     transform: scale( 1.15 );
 }
 
@@ -93,4 +100,11 @@
     background: rgba(39, 60, 117,.9);
     color: rgb( 200,200,200 );
     transform: translateY(-50%);
+}
+
+@media screen and (max-width: 950px) {
+
+    .list-products {
+        justify-content: center;
+    }
 }

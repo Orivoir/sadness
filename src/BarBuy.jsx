@@ -84,7 +84,7 @@ export default class BarBuy extends React.Component {
             <>
                 {
                     !this.state.open &&
-                    <section ref="barbuyclose" class="icon-close" onClick={this.onToggle}>
+                    <section ref="barbuyclose" className="icon-close" onClick={this.onToggle}>
                         <FontAwesomeIcon
                             icon={['fas' , 'shopping-cart' ]}
                             style={{color:"#fff"}}
@@ -144,14 +144,14 @@ export default class BarBuy extends React.Component {
                                     {this.props.basket.length < 4 ?
                                         <ul className='list-total'>
                                             {this.props.basket.map( product => (
-                                                <li>
+                                                <li key={product.id}>
                                                     {product.price} x {product.quantity}
                                                 </li>
                                             ) )}
                                         </ul> : null
                                     }
 
-                                    <p class="total-price">
+                                    <p className="total-price">
                                         {
                                             this.props.basket.map( product => product.price * product.quantity ).add()
                                         } €
