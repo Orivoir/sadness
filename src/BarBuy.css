@@ -22,7 +22,7 @@
 
 .BarBuy.close {
 
-    transform: translateX( 80% ) ;
+    transform: translateX( 100% ) ;
     min-width: 320px!important;  
     height: 10%;
     min-height: 30px;
@@ -104,7 +104,7 @@
 
 .hidden {
 
-    display: none;
+    display: none!important;
 }
 
 .o-hidden {
@@ -112,7 +112,7 @@
     opacity: 0!important;
 }
 
-.BarBuy .notif-buy {
+.icon-close .notif-buy {
 
     opacity: 1;
     position: absolute;
@@ -124,6 +124,16 @@
     color: #90cf78 ;
     font-weight: bold;
     transition: .35s linear opacity;
+}
+
+.icon-close {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background:#273c75;
+    padding: 2vh;
+    cursor: pointer;
 }
 
 .BarBuy .total-price {
@@ -147,19 +157,5 @@
 
         height: 100%;
         width: 100%;
-    }
-    
-    .BarBuy.close {
-
-        transform: translateX( 94% ) ;
-    }
-}
-
-@media screen and (max-width: 650px)  {
-
-    
-    .BarBuy.close {
-
-        transform: translateX( 90% ) ;
     }
 }
