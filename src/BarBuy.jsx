@@ -26,10 +26,38 @@ export default class BarBuy extends React.Component {
 
         this.onRemoveProduct = this.props.removeOne ;
         this.onToggle = this.onToggle.bind( this ) ; 
+        this.onScroll = this.onScroll.bind( this ) ; 
+    }
+
+    /**
+     * @bindMethod [constructor]
+     * @param {SyntheticEvent} e 
+     * @param {Node} barbuy 
+     */
+    onScroll( e , barbuy ) {
+
+        const header = document.querySelector('header') ;
+
+        if( !header ) return ;
+
+        if( e.pageY < header.offsetTop + header.offsetHeight )
+            barbuy.classList.add('hidden') ;
+        else 
+            barbuy.classList.remove('hidden') ;
+
+    }
+
+    componentDidMount(  ) {
+
+        const barbuy = this.refs.barbuy ;
+
+        if( !barbuy ) return ;
+
+        window.addEventListener( 'scroll' , e => this.onScroll( e, barbuy ) ) ;
     }
     
     /**
-     * 
+     * @bindMethod [constructor]
      * @param {SyntheticEvent} e 
      */
     onToggle( e ) {
@@ -41,7 +69,7 @@ export default class BarBuy extends React.Component {
     render() {
 
         return(
-            <section className={`BarBuy ${this.state.open ? "open":"close"}`}>
+            <section ref="barbuy" className={`BarBuy ${this.state.open ? "open":"close"}`}>
 
                <section className="status-change">
                     {/* icon */}

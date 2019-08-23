@@ -16,6 +16,26 @@
     background-size: cover;
 }
 
+.each-slide > div:hover::before {
+    
+    opacity: 0;
+}
+
+.each-slide > div::before {
+    
+    transition: .35s linear opacity;
+    opacity: 1; 
+    content: '' ;
+    position: absolute;
+    width: 8vh;
+    min-width: 35px;
+    min-height: 35px;
+    height: 8vh;
+    background-image: url("./../compass.svg") ;
+    background-size: cover;
+    background-color: #273c75;
+}
+
 .each-slide > div:hover .label-slide {
 
     opacity: 0;

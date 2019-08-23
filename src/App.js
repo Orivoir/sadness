@@ -3,6 +3,8 @@ import './App.css';
 import {Switch , Route} from 'react-router-dom';
 import Home from './RoutesRender/Home';
 import BarBuy from './BarBuy';
+import {HashLink as Link } from 'react-router-hash-link'; 
+import './Header.css';
 
 export default class App extends React.Component {
 
@@ -137,11 +139,24 @@ export default class App extends React.Component {
       <>
 
         <header>
-          {/*
-            -------------------------
-            --  in think building  --
-            -------------------------
-          */}
+          <div id="wrap-header">
+
+              {/* <h1></h1> */}
+
+              <nav>
+                <ul>
+                  <li>
+                    <Link id="nav-home-link" to="/">
+                    </Link>
+                  </li>
+                  <li><Link to="/men">men</Link></li>
+                  <li><Link to="/women">women</Link></li>
+                  <li><Link to="/child">child</Link></li>
+                  <li><Link id="nav-yoko-link" to="/yoko">yoko</Link></li>
+                </ul>
+              </nav>
+
+          </div>
         </header>
         
         {/* bar status buy products */}
@@ -155,6 +170,9 @@ export default class App extends React.Component {
           {/* <Route exact path="/men" addOne={this.addOne2Basket} render={<Clothing type={["men"]} />} /> */}
           {/* <Route exact path="/women" addOne={this.addOne2Basket} render={<Clothing type={["women"]} />}} /> */}
           {/* <Route exact path="/child" addOne={this.addOne2Basket} render={<Clothing type={["child"]} />}} /> */}
+
+          {/* yoko integrate mp4 : https://cdn.shopify.com/s/files/1/0240/3441/0601/files/video_site_yoko.mp4?11841 */}
+          {/* <Route exact path="/yoko" addOne={this.addOne2Basket} render={<Clothing type={["child","men","women"]} />}} /> */}
         </Switch>
       </>
     

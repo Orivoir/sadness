@@ -151,6 +151,15 @@
     
     .BarBuy.close {
 
-        transform: translateX( 86% ) ;
+        transform: translateX( 94% ) ;
+    }
+}
+
+@media screen and (max-width: 650px)  {
+
+    
+    .BarBuy.close {
+
+        transform: translateX( 90% ) ;
     }
 }

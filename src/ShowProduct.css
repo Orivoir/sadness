@@ -6,6 +6,32 @@
     flex-wrap: wrap;
 }
 
+.list-products .wrap-btns {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-products .wrap-btns button {
+
+    cursor: pointer;
+    padding: 1vh 2vh;
+    border: 0;
+    background-color: #273c75;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .18rem;
+    border-radius: 8px;
+    transition: .3s linear all!important; 
+}
+
+
+.list-products .wrap-btns button:hover {
+
+    background-color: #2c4a9e;
+}
+
+
 .list-products section {
 
     margin: 3vh 0;
@@ -51,7 +77,7 @@
 }
 
 
-.list-products section figure:hover figcaption {
+.list-products section img:hover figcaption {
 
     opacity: 0;
 }
