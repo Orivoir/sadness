@@ -107,8 +107,14 @@
     display: none;
 }
 
+.o-hidden {
+
+    opacity: 0!important;
+}
+
 .BarBuy .notif-buy {
 
+    opacity: 1;
     position: absolute;
     left: 7.5%;
     top: -10px;
@@ -117,6 +123,7 @@
     padding: .5vh;
     color: #90cf78 ;
     font-weight: bold;
+    transition: .35s linear opacity;
 }
 
 .BarBuy .total-price {

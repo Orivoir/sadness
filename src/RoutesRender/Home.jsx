@@ -2,6 +2,7 @@ import React from 'react' ;
 import DocumentTitle from 'react-document-title';
 import { products } from './../products/products' ;
 import ShowProducts from './../ShowProduct';
+import SliderSadness from './../Slide/SliderSadness';
 
 export default class Home extends React.Component {
 
@@ -18,14 +19,12 @@ export default class Home extends React.Component {
             <DocumentTitle title="sadness | home">
                 <section className="Home">
 
-                    {/* 
-                        Slider of product
-                        <Slider
-                            list={[
-                                {title : (string) ,subtitle: (string=null) ,  picture: ( string|url ) } , ...
-                            ]}
-                        />
-                    */}
+                    <SliderSadness
+                        list={
+                            products.slice( 0 , 4 )
+                        }
+                        onClick={this.onAddProduct}
+                    />
 
                     {/* flex - align random products */}
 

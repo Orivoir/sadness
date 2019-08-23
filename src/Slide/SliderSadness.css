@@ -1,0 +1,36 @@
+.each-slide > div {
+
+    position: relative;
+    height: 60vh;
+    min-height: 250px;
+    cursor: pointer;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.each-slide > div:hover {
+    
+    background-position: center 0%;
+    background-size: cover;
+}
+
+.each-slide > div:hover .label-slide {
+
+    opacity: 0;
+}
+
+.label-slide {
+
+    opacity: 1;
+    transition: .35s linear opacity;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0, .75 ) ;
+    color: #fff;
+    padding: 1vh;
+    font-size: 2rem;
+    text-align: center;
+}

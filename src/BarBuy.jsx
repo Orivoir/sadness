@@ -53,7 +53,7 @@ export default class BarBuy extends React.Component {
                         className="icon-status"
                     />
                     {/* in the basket */}
-                    <span onClick={this.onToggle} className={`${!this.props.basket.length || this.state.open ? "hidden" : ""} notif-buy`}>{this.props.basket.length}</span>
+                    <span onClick={this.onToggle} className={`${!this.props.basket.length || this.state.open ? "o-hidden" : ""} notif-buy`}>{this.props.basket.length}</span>
 
                </section>
 
