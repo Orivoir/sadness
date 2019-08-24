@@ -16,7 +16,8 @@ export default class BarBuy extends React.Component {
 
     state = {
 
-        open: false
+        open: false ,
+        full: false
 
     } ;
 
@@ -34,12 +35,19 @@ export default class BarBuy extends React.Component {
      * @param {SyntheticEvent} e 
      */
     onResize( e ) {
-        
+
         this.positionBarBuy() ;
     }
 
     positionBarBuy() {
+        
+        if( window.screen.height <= 450 || window.screen.width <= 550 ) {
 
+            this.setState( { full: true } ) ;
+        } else {
+            
+            this.setState( { full: false } ) ;
+        }
         
         const 
             barbuy = this.refs.barbuy ,
@@ -51,8 +59,14 @@ export default class BarBuy extends React.Component {
             return ;
         
         else {
-            barbuy.style.top = (header.offsetTop + header.offsetHeight) + 'px'
-            barbuyclose.style.top = (header.offsetTop + header.offsetHeight) + 'px'
+        
+            if( !this.state.full )
+                barbuy.style.top = (header.offsetTop + header.offsetHeight) + 'px' ;
+            else {
+                barbuy.style.top = '0px';
+            }
+            
+                barbuyclose.style.top = (header.offsetTop + header.offsetHeight) + 'px'
         }
     }
 

@@ -5,6 +5,7 @@ import Home from './RoutesRender/Home';
 import BarBuy from './BarBuy';
 import {HashLink as Link } from 'react-router-hash-link'; 
 import './Header.css';
+import './Footer.css';
 import Clothing from './Clothing/Clothing';
 
 export default class App extends React.Component {
@@ -187,6 +188,16 @@ export default class App extends React.Component {
             }
           />
         </Switch>
+
+        <footer>
+          <p>
+            UserInterface e-commerce fictive développer avec Reactjs &amp; {"<3"} par&nbsp;
+            <a href="https://github.com/Orivoir/" title="github profil">
+              Samuel Gaborieau
+            </a>
+          </p>
+        </footer>
+
       </>
     
     );
