@@ -5,6 +5,7 @@ import Home from './RoutesRender/Home';
 import BarBuy from './BarBuy';
 import {HashLink as Link } from 'react-router-hash-link'; 
 import './Header.css';
+import Clothing from './Clothing/Clothing';
 
 export default class App extends React.Component {
 
@@ -167,12 +168,24 @@ export default class App extends React.Component {
 
         <Switch>
           <Route exact path="/" render={() => <Home addOne={this.addOne2Basket} />} />
-          {/* <Route exact path="/men" addOne={this.addOne2Basket} render={<Clothing type={["men"]} />} /> */}
-          {/* <Route exact path="/women" addOne={this.addOne2Basket} render={<Clothing type={["women"]} />}} /> */}
-          {/* <Route exact path="/child" addOne={this.addOne2Basket} render={<Clothing type={["child"]} />}} /> */}
+          <Route exact path="/men" render={() =>
+            <Clothing banner="men" addOne={this.addOne2Basket} type={["men"]} />}
+          />
+          <Route exact path="/women" render={() => 
+              <Clothing banner="women" addOne={this.addOne2Basket} type={["women"]} />
+            } 
+          />
+          <Route exact path="/child" render={() => 
+              <Clothing banner="child" addOne={this.addOne2Basket}  type={["child"]} />
+            }
+          />
 
           {/* yoko integrate mp4 : https://cdn.shopify.com/s/files/1/0240/3441/0601/files/video_site_yoko.mp4?11841 */}
-          {/* <Route exact path="/yoko" addOne={this.addOne2Basket} render={<Clothing type={["child","men","women"]} />}} /> */}
+          <Route exact path="/yoko"
+            render={() =>
+              <Clothing banner="yoko" type={["child","men","women"]} extra="yoko" />
+            }
+          />
         </Switch>
       </>
     
