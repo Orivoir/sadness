@@ -183,7 +183,7 @@ export default class App extends React.Component {
           {/* yoko integrate mp4 : https://cdn.shopify.com/s/files/1/0240/3441/0601/files/video_site_yoko.mp4?11841 */}
           <Route exact path="/yoko"
             render={() =>
-              <Clothing banner="yoko" type={["child","men","women"]} extra="yoko" />
+              <Clothing banner="yoko" addOne={this.addOne2Basket} type={["child","men","women"]} extra="yoko" />
             }
           />
         </Switch>

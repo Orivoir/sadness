@@ -38,7 +38,7 @@ export default class Clothing extends React.Component {
 
         let typeCollection = [] ;
 
-        const {banner , type , extra , addOne } = this.props ; 
+        const {banner , type , extra , addOne } = this.props ;
 
         type.map( current => (
             typeCollection = [ ...typeCollection , ...this[ current ] ]

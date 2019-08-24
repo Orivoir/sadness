@@ -13,12 +13,12 @@
 
     display: flex;
     justify-content: space-around;
-    z-index: 50;
+    /* z-index: 50; */
 }
 
 .list-products .wrap-btns button {
 
-    z-index: 99;
+    z-index: 3;
     cursor: pointer;
     padding: 1vh 2vh;
     border: 0;
