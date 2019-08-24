@@ -1,14 +1,13 @@
 import React from 'react';
 import './BannerType.css';
 import DocumentTitle from 'react-document-title' ;
+import childImg from './child_banner.jpg';
 
 export default class BannerType extends React.Component {
 
     render() {
         
         const { type } = this.props ;
-
-        console.log( type);
 
         return (
             <DocumentTitle title={`sadness | ${type}`}>
@@ -50,7 +49,18 @@ export default class BannerType extends React.Component {
                         </>) :
                         
                         // Else child banner
-                        (<></>)
+                        (<>
+                            <figure className="child-figure-banner">
+                                <img
+                                    alt="child clothings"
+                                    src={childImg}
+                                    // default size (px)
+                                    height="500"
+                                    width="900"
+                                />
+                                <h2>CHILD Products</h2>
+                            </figure>
+                        </>)
 
                     }
 

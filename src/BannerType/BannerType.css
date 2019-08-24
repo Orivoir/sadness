@@ -13,7 +13,8 @@
 
 .banner-yoko h2 , 
 .men-figure-banner h2 ,
-.women-figure-banner h2
+.women-figure-banner h2 ,
+.child-figure-banner h2
 {
 
     position: absolute;
@@ -32,14 +33,20 @@
     background: rgba( 255,255,255,.5 );
 }
 
-.women-figure-banner img , .men-figure-banner img {
+.women-figure-banner img , 
+.men-figure-banner img ,
+.child-figure-banner img
+{
 
     display: inline-block;
     width: 100%;
     height: auto;
 }
 
-.women-figure-banner , .men-figure-banner {
+.women-figure-banner ,
+.men-figure-banner ,
+.child-figure-banner
+{
 
     margin: 0;
     position: relative;
@@ -49,7 +56,8 @@
     
     .banner-yoko h2 , 
     .men-figure-banner h2 ,
-    .women-figure-banner h2
+    .women-figure-banner h2 ,
+    .child-figure-banner h2
     {
         font-size: 1.5rem;
     }

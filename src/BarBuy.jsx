@@ -25,47 +25,42 @@ export default class BarBuy extends React.Component {
         super( props ) ;
 
         this.onRemoveProduct = this.props.removeOne ;
-        this.onToggle = this.onToggle.bind( this ) ; 
-        this.onScroll = this.onScroll.bind( this ) ; 
+        this.onToggle = this.onToggle.bind( this ) ;
+        this.onResize = this.onResize.bind( this ) ; 
     }
 
     /**
-     * @bindMethod [constructor]
+     * @BindMethod [constructor]
      * @param {SyntheticEvent} e 
-     * @param {Node} barbuy 
      */
-    onScroll( e , barbuy , barbuyclose ) {
-
-        const header = document.querySelector('header') ;
-
-        if( !header ) return ;
-
-        if( e.pageY < header.offsetTop + header.offsetHeight ) {
-
-            if( barbuy )
-                barbuy.classList.add('hidden');
-            if( barbuyclose )
-                barbuyclose.classList.add('hidden') ;
-        }
-        else {
-            if( barbuy )
-                barbuy.classList.remove('hidden') ;
-            if( barbuyclose )
-                barbuyclose.classList.remove('hidden') ;
-        }
-
+    onResize( e ) {
+        
+        this.positionBarBuy() ;
     }
 
-    componentDidMount(  ) {
+    positionBarBuy() {
 
+        
         const 
             barbuy = this.refs.barbuy ,
-            barbuyclose = this.refs.barbuyclose
+            barbuyclose = this.refs.barbuyclose ,
+            header = document.querySelector('header')
         ;
 
-        window.addEventListener( 'scroll' , e =>
-            this.onScroll( e, barbuy , barbuyclose )
-        ) ;
+        if( !header )
+            return ;
+        
+        else {
+            barbuy.style.top = (header.offsetTop + header.offsetHeight) + 'px'
+            barbuyclose.style.top = (header.offsetTop + header.offsetHeight) + 'px'
+        }
+    }
+
+    componentDidMount() {
+
+        this.positionBarBuy() ;
+
+        window.addEventListener( 'resize' , this.onResize ) ;
     }
     
     /**
@@ -78,20 +73,22 @@ export default class BarBuy extends React.Component {
         this.setState( state => ( { open: !state.open } ) ) ;
     }
 
+    loadOnClose() {
+    }
+
     render() {
 
         return(
             <>
                 {
-                    !this.state.open &&
-                    <section ref="barbuyclose" className="icon-close" onClick={this.onToggle}>
+                    <section ref="barbuyclose" className={`${this.state.open ? 'hidden' : ''} icon-close`} onClick={this.onToggle}>
                         <FontAwesomeIcon
                             icon={['fas' , 'shopping-cart' ]}
                             style={{color:"#fff"}}
                             size="2x"
                             className="icon-status"
                         />
-                        <span onClick={this.onToggle} className={`${!this.props.basket.length || this.state.open ? "o-hidden" : ""} notif-buy`}>{this.props.basket.length}</span>
+                        <span className={`${!this.props.basket.length || this.state.open ? "o-hidden" : ""} notif-buy`}>{this.props.basket.length}</span>
                     </section>
                 }
 
