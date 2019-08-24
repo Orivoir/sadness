@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/sadness/static/css/main.a9d3bc79.chunk.css",
+    "main.js": "/sadness/static/js/main.072e2a99.chunk.js",
+    "main.js.map": "/sadness/static/js/main.072e2a99.chunk.js.map",
+    "runtime~main.js": "/sadness/static/js/runtime~main.7163046d.js",
+    "runtime~main.js.map": "/sadness/static/js/runtime~main.7163046d.js.map",
+    "static/css/2.47fb9b64.chunk.css": "/sadness/static/css/2.47fb9b64.chunk.css",
+    "static/js/2.e7aa20e3.chunk.js": "/sadness/static/js/2.e7aa20e3.chunk.js",
+    "static/js/2.e7aa20e3.chunk.js.map": "/sadness/static/js/2.e7aa20e3.chunk.js.map",
+    "index.html": "/sadness/index.html",
+    "precache-manifest.4f5bfaf90715ee90442e9b7a332fc90e.js": "/sadness/precache-manifest.4f5bfaf90715ee90442e9b7a332fc90e.js",
+    "service-worker.js": "/sadness/service-worker.js",
+    "static/css/2.47fb9b64.chunk.css.map": "/sadness/static/css/2.47fb9b64.chunk.css.map",
+    "static/css/main.a9d3bc79.chunk.css.map": "/sadness/static/css/main.a9d3bc79.chunk.css.map",
+    "static/media/child_banner.jpg": "/sadness/static/media/child_banner.a7e7dd32.jpg",
+    "static/media/Header.css": "/sadness/static/media/compass.c82d5f8c.svg"
+  }
+}
